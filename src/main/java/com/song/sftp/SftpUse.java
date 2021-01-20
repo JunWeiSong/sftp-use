@@ -18,7 +18,7 @@ import javax.swing.filechooser.FileSystemView;
 
 /**
  * @Package: com.song.sftp
- * @Description： sftp测试使用
+ * @Description： sftp测试使用,若只有一个服务器连接，可将session提取为公共部分
  * @Author: SongJunWei
  * @Date: 2021/1/20
  * @Modified By:
