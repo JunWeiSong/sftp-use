@@ -37,7 +37,7 @@ public class SftpUse {
         String backPath = backPath(currentCatalog, status);
         Session session = null;
         try {
-            session = LinuxConnectionHelper.connect("192.168.0.58", "www", "DIWU*#23e",
+            session = LinuxConnectionHelper.connect("192.168.0.1", "root", "123456",
                     22, null, null);
             return LinuxConnectionHelper.listFiles(backPath, session);
         } catch (Exception e) {
@@ -57,7 +57,7 @@ public class SftpUse {
         try {
             String fileName = file.getOriginalFilename();
 
-            session = LinuxConnectionHelper.connect("192.168.0.58", "www", "DIWU*#23e",
+            session = LinuxConnectionHelper.connect("192.168.0.1", "root", "123456",
                     22, null, null);
 
             if(StringUtils.isBlank(progressKey)){
@@ -91,7 +91,7 @@ public class SftpUse {
         String upPath = StringUtils.isEmpty(uploadPath) ? desktopPath() : uploadPath.trim();
         Session session = null;
         try {
-            session = LinuxConnectionHelper.connect("192.168.0.58", "www", "DIWU*#23e",
+            session = LinuxConnectionHelper.connect("192.168.0.1", "root", "123456",
                     22, null, null);
 
             if(StringUtils.isBlank(progressKey)){
